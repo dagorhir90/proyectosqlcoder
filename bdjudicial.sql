@@ -34,7 +34,7 @@ CREATE TABLE Caso (
     id_caso  INT NOT NULL,
     caratula VARCHAR(200),
     fuero VARCHAR (100),
-    jurisdiccion VARCHAR (100),
+    juzgado VARCHAR (100),
     fecha_inicio DATE,
     fecha_archivo DATE DEFAULT NULL,
     FOREIGN KEY (id_caso) REFERENCES Caso(id_caso)
