@@ -15,7 +15,7 @@ CREATE TABLE Abogado (
     nombre_abo VARCHAR(100) NOT NULL,
     apellido_abo VARCHAR(100) NOT NULL,
     matricula_abo  VARCHAR(20),
-    especialidades_abo VARCHAR (100) DEFAULT NULL,
+    especialidades_abo VARCHAR (100),
     telefono_abo VARCHAR (20),
     mail_abo VARCHAR (40) UNIQUE DEFAULT NULL
     );
@@ -50,7 +50,7 @@ CREATE TABLE Caso (
 CREATE TABLE cliente_caso (
     id_cliente INT,
     id_caso INT,
-    rol_cli VARCHAR(100),
+    rol_cliente VARCHAR(100),
     PRIMARY KEY (id_cliente, id_caso),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY (id_caso) REFERENCES caso(id_caso)
